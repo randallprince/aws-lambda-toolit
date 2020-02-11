@@ -1,0 +1,119 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "extends": [
+    "airbnb-typescript/base",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "plugins": ["sort-class-members"],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "directory": "./",
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "rules": {
+    "global-require": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "import/no-dynamic-require": 0,
+    "no-underscore-dangle": [
+      2,
+      {
+        "allowAfterThis": true,
+        "allowAfterSuper": true,
+        "enforceInMethodNames": true,
+        "allow": ["_schema", "_formatErrors"]
+      }
+    ],
+    "max-classes-per-file": 0,
+    "class-methods-use-this": 0,
+    "@typescript-eslint/no-namespace": 0,
+    "import/no-extraneous-dependencies": [
+      2,
+      {
+        "devDependencies": ["**/test.ts"]
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 120
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "no-console": "off",
+    "import/no-duplicates": 0,
+    "import/no-unresolved": 2,
+    "import/extensions": [
+      2,
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "lines-between-class-members": [
+      "error",
+      "always",
+      {
+        "exceptAfterSingleLine": true
+      }
+    ],
+    "sort-class-members/sort-class-members": [
+      2,
+      {
+        "order": ["[properties]", "constructor", "[arrow-function-properties]", "[methods]"],
+        "sort": "alphabetical"
+      }
+    ],
+    "node/no-extraneous-import": 0,
+    "node/no-missing-import": 0
+  },
+  "overrides": [
+    {
+      "files": ["*.spec.ts", "spec/**/*.ts"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "max-len": [
+          "warn",
+          {
+            "code": 120
+          }
+        ],
+        "@typescript-eslint/ban-ts-ignore": "off",
+        "import/order": "off",
+        "import/first": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-non-null-assertion": "off"
+      }
+    },
+    {
+      "files": ["*.d.ts"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    }
+  ]
+}
