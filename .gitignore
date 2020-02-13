@@ -44,7 +44,6 @@ build/
 /bazel-out
 /connect.lock
 /coverage
-/dist
 /libpeerconnection.log
 /node_modules
 /out-tsc

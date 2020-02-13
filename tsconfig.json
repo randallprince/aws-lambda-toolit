@@ -13,7 +13,7 @@
     "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "outDir": "./dist/node-toolkit",
+    "outDir": "./dist/aws-lambda-toolkit",
     "lib": ["es2018"],
     "moduleResolution": "node",
     "resolveJsonModule": true,
