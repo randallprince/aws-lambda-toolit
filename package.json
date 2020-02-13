@@ -40,7 +40,7 @@
     "ts-jest": "^24.1.0",
     "typescript": "^3.7.2"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "typings": "index.d.ts",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -60,5 +60,5 @@
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
-  "version": "0.3.2-59"
+  "version": "0.4.0"
 }
